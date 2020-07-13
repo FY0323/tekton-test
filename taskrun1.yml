@@ -5,3 +5,12 @@ metadata:
 spec:
   taskRef:
     name: docker-image
+  resources:
+    inputs:
+      - name: git-resource
+        resourceRef:
+          name: git-resource
+    outputs:
+      - name: image-resource
+        resourceRef:
+          name: image-resource
