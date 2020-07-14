@@ -16,8 +16,8 @@ spec:
     - name: imageUrl
       value: fy0323/tekton-test
     - name: imageTag
-      value: "1.0"
-  #serviceAccountName: pipeline-account
+      value: "1"
+  serviceAccountName: pipeline-account
   workspaces:
     - name: git-source
       persistentVolumeClaim:
