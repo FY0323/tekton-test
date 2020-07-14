@@ -1,0 +1,24 @@
+#
+# https://github.com/IBM/tekton-tutorial/blob/beta-update/tekton/run/picalc-pipeline-run.yaml
+#
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: build-and-push-pieline
+spec:
+  pipelineRef:
+    name: build-and-push-pipeline
+  params:
+    - name: gitUrl
+      value: https://github.com/FY0323/tekton-test.git
+    - name: pathToContext
+      value: .
+    - name: imageUrl
+      value: fy0323/tekton-test
+    - name: imageTag
+      value: "1.0"
+  #serviceAccountName: pipeline-account
+  workspaces:
+    - name: git-source
+      persistentVolumeClaim:
+        claimName: tekton-volume
