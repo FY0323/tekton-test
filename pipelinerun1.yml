@@ -14,7 +14,7 @@ spec:
     - name: pathToContext
       value: .
     - name: pathToYamlFile
-      value: "test-app.yaml"
+      value: "test-app.yml"
     - name: imageUrl
       value: fy0323/tekton-test
     - name: imageTag

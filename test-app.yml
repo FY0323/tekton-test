@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app-test
-        image: fy0323/tekton-test:latest
+        image: fy0323/tekton-test:1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
