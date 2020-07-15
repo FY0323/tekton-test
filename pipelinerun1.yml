@@ -13,6 +13,8 @@ spec:
       value: https://github.com/FY0323/tekton-test.git
     - name: pathToContext
       value: .
+    - name: pathToYamlFile
+      value: "test-app.yaml"
     - name: imageUrl
       value: fy0323/tekton-test
     - name: imageTag
