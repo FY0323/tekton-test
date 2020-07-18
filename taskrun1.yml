@@ -11,11 +11,3 @@ spec:
       value: https://github.com/FY0323/tekton-test.git
   taskRef:
     name: git-clone
-#  resources:
-#    inputs:
-#      - name: url
-#        resourceSpec:
-#          type: git
-#          params:
-#            - name: url
-#              value: https://github.com/FY0323/tekton-test.git

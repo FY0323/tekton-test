@@ -1,6 +1,3 @@
-#
-# https://github.com/IBM/tekton-tutorial/blob/beta-update/tekton/run/picalc-pipeline-run.yaml
-#
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
