@@ -1,13 +1,23 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"net/http"
+	"os"
 
-func main(){
+	"github.com/gin-gonic/gin"
+)
+
+func main() {
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
+		c.JSON(http.StatusOK, gin.H{
 			"message": "Hello Gin",
 		})
 	})
-	r.Run()
+
+	if err := r.Run(); err != nil {
+		fmt.Fprintf(os.Stderr, "failed to run: %v\n", err)
+		os.Exit(1)
+	}
 }
