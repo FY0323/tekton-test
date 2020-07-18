@@ -1,16 +1,13 @@
 apiVersion: tekton.dev/v1beta1
 kind: TaskRun
 metadata:
-  name: buid-push-run
+  name: git-clone-run
 spec:
+  workspaces:
+    - name: output
+      emptyDir: {}
+  params:
+    - name: url
+      value: https://github.com/FY0323/tekton-test.git
   taskRef:
-    name: docker-image
-  resources:
-    inputs:
-      - name: git-resource
-        resourceRef:
-          name: git-resource
-    outputs:
-      - name: image-resource
-        resourceRef:
-          name: image-resource
+    name: git-clone
